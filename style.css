@@ -1,0 +1,275 @@
+
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.barra-progress{
+    animation: 1s all;
+    width: 100%;
+    border-radius: 10px;
+    height: 15px;
+    margin-bottom: 2rem;
+    background-color: rgb(184, 186, 184);
+}
+.barra-progress .porcent{
+    animation: 1s all;
+    width: 4%;
+    border-radius: 10px;
+    height: 15px;
+    margin-bottom: 2rem;
+    background-color: green;
+}
+.contenedor_loader{
+    background-color: #c1d7f1;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    transition: all 1.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader,
+.loader:before,
+.loader:after{
+    border-radius:50%;
+    width: 2.5em;
+    height: 2.5em;
+    animation: Loader 1.5s infinite ease-in-out;
+}
+
+.loader{
+    color: #fff;
+    font-size: 13px;
+    position: relative;
+    animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after{
+    content: '';
+    position: absolute;
+    top: 0;
+}
+
+.loader:before{
+    left: -3.5em;
+    animation-delay: -0.32s;
+
+}
+.loader:after{
+    left: 3.5em;
+
+}
+@keyframes Loader{
+    0%,
+    80%,
+    100%{
+        box-shadow: 0 2.5em 0 -1.3em;
+    }
+    40%{
+        box-shadow: 0 2.5em 0 0;
+
+    }
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.quiz-container{
+          /* From https://css.glass */
+          background: rgba(255, 255, 255, 0.24);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 95vh;
+    padding: 1rem 1.3rem;
+    height: fit-content;/*Se acomoda de acuerdo al espacio que necesite, es perfecto si deseo que el alto dependa de cuanto ocupa el contenido*/
+    border-radius: 10px;
+    box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.1);
+}
+.quiz-container .quiz-header{
+    padding: 2.5rem;
+    padding-bottom: 0;
+}
+a{
+    transition: 0.7s all;
+    display: block;
+    border: 1px slateblue solid;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: slateblue;
+    cursor: pointer;
+    margin-bottom: 18px;
+    background-color: #cececf1b;
+}
+
+.question{
+    margin-bottom: 1rem;
+}
+.question-quiz{
+    transition: 0.7s all;
+    display: block;
+    border: 1px slateblue solid;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: slateblue;
+    cursor: pointer;
+    margin-bottom: 18px;
+    background-color: rgba(105, 90, 205, 0.329);
+    margin-bottom: 1rem;
+
+}
+h2{
+    text-align: center;
+}
+
+.btn-submit{
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+    border-radius:20px;
+    width: 150px;
+    height: 55px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: slateblue ;
+    font-family: system-ui;
+
+}
+.btn-submit:hover{
+    cursor: pointer;
+}
+
+
+#Attempt{
+    text-align: center;
+    display: block;
+    background-color: #cfc61a;
+    margin: 0.7rem auto;
+    border-radius: 4px;
+    padding: 10px;
+    border: none;
+}
+#Attempt:hover{
+    transition: 1s all;
+    cursor: pointer;
+    background-color: #1a71cf;
+}
+#imagen_final{
+    width: 220px;
+    display: block;
+    margin: auto;
+}
+
+.title-end{
+    text-align: center;
+    padding: 0 20px;
+}
+.quiz-container .parrafo-end{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.quiz-container .result-quiz{
+    background-color: rgba(240, 60, 60, 0.35);
+    border-radius: 20px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+.quiz-container .result-world{
+    background-color: rgba(240, 60, 60, 0.35);
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz-container .porcentaje{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color:#c1d7f1 ;
+}
+
+
+.end-information .lesson{
+    padding: 10px;
+    display: flex;
+    padding: 15px 20px;
+    margin-bottom: 1rem;
+    background-color: #ab77e32f;
+    border-radius: 20px;
+    flex-direction: column;
+}
+.end-information .lesson h2{
+    text-align: left;
+}
+.end-information .lesson p{
+    margin-bottom: 1.8rem;
+}
+.end-information .lesson .causa{
+    display: flex;
+    justify-content: space-around;
+    background-color: whitesmoke;
+    margin-bottom: 1rem;
+    padding: 20px 0px;
+    border-radius: 20px;
+}
+.end-information .lesson .causa .img{
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    background-color: #fff;
+    border-radius: 100%;
+}
+.information-causas{
+    width: 260px;
+}
+.information-causas p{
+    line-height: 20px;
+    font-weight:400;
+    color: #555;
+}
+.right{
+    flex-direction: row-reverse;
+}
+.top {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.top .information-causas{
+    width: 85%;
+    margin-top: 10px;
+}
